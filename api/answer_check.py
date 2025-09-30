@@ -53,8 +53,8 @@ def cut(answer):
     # IndexError: Cannot choose from an empty sequence #391
     # 同时为了避免没有考虑到的 case, 应该先按照 '\n' 匹配, 匹配不到再按照其他字符匹配
     cut_char = [
-        "#",
         "\n",
+        "#",
         ",",
         "，",
         "|",

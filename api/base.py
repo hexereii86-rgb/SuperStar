@@ -531,7 +531,7 @@ class Chaoxing:
                 if q["type"] == "multiple":
                     # 多选处理
                     options_list = multi_cut(q["options"])
-                    res_list = multi_cut(res)
+                    res_list = multi_cut(res.replace("#", "\n"))
                     if res_list is not None and options_list is not None:
                         for _a in clean_res(res_list):
                             for o in options_list:
