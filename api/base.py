@@ -406,27 +406,6 @@ class Chaoxing:
             # ',' 在常规被正确划分的, 选项中出现, 导致 multi_cut 无法正确划分选项 #391
             # IndexError: Cannot choose from an empty sequence #391
             # 同时为了避免没有考虑到的 case, 应该先按照 '\n' 匹配, 匹配不到再按照其他字符匹配
-            cut_char = [
-                "\n",
-                ",",
-                "，",
-                "|",
-                "\r",
-                "\t",
-                "#",
-                "*",
-                "-",
-                "_",
-                "+",
-                "@",
-                "~",
-                "/",
-                "\\",
-                ".",
-                "&",
-                " ",
-                "、",
-            ]  # 多选答案切割符
             res = cut(answer)
             if res is None:
                 logger.warning(
