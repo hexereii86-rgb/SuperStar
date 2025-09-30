@@ -22,7 +22,8 @@ jobs:
       - name: 安装依赖包
         run: | # 安装依赖包
           pip install -r ./requirements.txt 
-          
+      - name: 导入配置
+        run: echo "${{ secrets.CONFIG }}" > config.ini
       
       - name: Run main.py
-        run: python main.py -u ${{ secrets.TELEPHONE }} -p ${{ secrets.PASSWORD }} -l 254472451 -s 2 #课程id，默认为心理课的
+        run: python main.py -c config.ini
