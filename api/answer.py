@@ -57,7 +57,7 @@ class Tiku:
     CONFIG_PATH = "config.ini"  # 默认配置文件路径
     DISABLE = False     # 停用标志
     SUBMIT = False      # 提交标志
-    COVER_RATE = 0.8    # 覆盖率
+    COVER_RATE = 0.6    # 覆盖率
     true_list = []
     false_list = []
     def __init__(self) -> None:
@@ -97,7 +97,6 @@ class Tiku:
         if not self.DISABLE:
             # 设置提交模式
             self.SUBMIT = True if self._conf['submit'] == 'true' else False
-            self.COVER_RATE = float(self._conf['cover_rate'])
             self.true_list = self._conf['true_list'].split(',')
             self.false_list = self._conf['false_list'].split(',')
             # 调用自定义题库初始化
