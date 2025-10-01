@@ -18,7 +18,7 @@ from api.decode import (
 )
 from api.process import show_progress
 from api.exceptions import MaxRetryExceeded
-
+import os
 
 def get_timestamp():
     return str(int(time.time() * 1000))
@@ -630,10 +630,10 @@ class Chaoxing:
                 logger.info(f'{"提交" if questions["pyFlag"] == "" else "保存"}答题成功 -> {res_json["msg"]}')
             else:
                 logger.error(f'{"提交" if questions["pyFlag"] == "" else "保存"}答题失败 -> {res_json["msg"]}')
-                return self.StudyResult.ERROR
+                os.exit(1)
         else:
             logger.error(f'{"提交" if questions["pyFlag"] == "" else "保存"}答题失败 -> {res.text}')
-            return self.StudyResult.ERROR
+            os.exit(1)
         return self.StudyResult.SUCCESS
 
     def strdy_read(self, _course, _job, _job_info) -> StudyResult:
