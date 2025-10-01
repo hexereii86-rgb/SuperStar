@@ -32,7 +32,7 @@
 
 1. 在 GitHub 上找到并Fork[本仓库](https://github.com/andyzhouty/SuperStar)
 2. 在你自己的 Fork 仓库中点开 Actions 栏并启用
-3. 在仓库的`Settings > Secrets and variables > Actions > Repository Secrets`中创建一个名为`CONFIG`的隐私量，并根据如下模版把xxx改成你自己的信息，其中`course_list`中的课程id需要登录网页版超星自行在网址中寻找，：
+3. 在仓库的`Settings > Secrets and variables > Actions > Repository Secrets`中创建一个名为`CONFIG`的隐私量，并根据如下模版把xxx改成你自己的信息，其中`course_list`中的课程id需要登录网页版超星自行网址中寻找，：
 
     ```ini
     [common]
@@ -67,5 +67,6 @@
 6. 如果题库答案有误，该程序会报错，GitHub Actions会发送失败邮件到你的邮箱，届时需要自行解答卡住的习题，并回到 Actions 页面点击Rerun。
 7. 如果没有报错，一般而言该程序最多可以一次性刷六个小时。
 8. 配置好，就请去做比刷水课更有意义的事情！
+
 
 
